@@ -41,6 +41,7 @@ public class Exercise {
 		}
 		
 	}
+
 	public double getPersonalBest() {
 		return personalBest;
 	}
