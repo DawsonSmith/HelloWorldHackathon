@@ -42,6 +42,7 @@ public class FitnessApp {
 		double bodyFatWeight;
 		double height;
 
+
 		System.out.println("Welcome to Your Personal Fitness Application");
 		System.out.println("Please Enter Your Gender (Male or Female): ");
 		sex = input.next();
@@ -67,6 +68,7 @@ public class FitnessApp {
 			leanBodyMass = factor1 + factor2 - factor3 - factor4 + factor5;
 			bodyFatWeight = weight - leanBodyMass;
 			bodyFatPercentage = (bodyFatWeight * 100) / weight;
+			bodyMassIndex = (weight * 703)/(height * height);
 		}
 		if (sex .equals("Male")){
 
@@ -76,6 +78,7 @@ public class FitnessApp {
 		leanBodyMass = factor1 - factor2;
 		bodyFatWeight = weight - leanBodyMass;
 		bodyFatPercentage = (bodyFatWeight * 100)/weight;
+		bodyMassIndex = (weight * 703)/(height * height);
 
 	}
 
