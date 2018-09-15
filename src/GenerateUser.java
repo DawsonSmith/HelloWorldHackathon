@@ -103,4 +103,20 @@ public class GenerateUser {
 	public void setHipCircumference(double hc) {
 		hipCircumference = hc;
 	}
+	public String determineHealth() {
+		//point-slope form for height which is compare in this statement 
+		double compare = (12.0/42.0)*(weight-98)+61;
+		if(height>compare) {
+			return "Underweight";
+		}
+		compare = (11.0/56.0)*(weight-210)+77;
+		if(height>compare) {
+			return "Healthy";
+		}
+		compare = (19.0/112.0)*(weight-266)+79;
+		if(height>compare) {
+			return "Overweight";
+		}
+		return "Obese";
+	}
 }
