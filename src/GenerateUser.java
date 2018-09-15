@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class GenerateUser {
 	Scanner input = new Scanner(System.in);
 	public boolean sex = true;
@@ -10,22 +9,16 @@ public class GenerateUser {
 	public double hipCircumference = 0.0;
 	public double height = 0.0;
 	public GenerateUser() {
-		boolean sex = true;
-		double weight = 0.0;
-		double wristCircumference = 0.0;
-		double waistCircumference = 0.0;
-		double forearmCircumference = 0.0;
-		double hipCircumference = 0.0;
-		double height = 0.0;
+		sex = true;
+		weight = 0.0;
+		wristCircumference = 0.0;
+		waistCircumference = 0.0;
+		forearmCircumference = 0.0;
+		hipCircumference = 0.0;
+		height = 0.0;
 	}
 	public GenerateUser(Scanner s) {
-		boolean sex = true;
-		double weight = 0.0;
-		double wristCircumference = 0.0;
-		double waistCircumference = 0.0;
-		double forearmCircumference = 0.0;
-		double hipCircumference = 0.0;
-		double height = 0.0;
+		sex = true;
 		System.out.println("Welcome to Your Personal Fitness Application");
 		System.out.println("Please Enter Your Gender (Male or Female): ");
 		//sex = input.next();
