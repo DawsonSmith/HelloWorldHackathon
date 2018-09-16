@@ -23,5 +23,32 @@ public class Schedule {
 	String[] inclineDumbbellBenchTargets = {"Chest","Shoulders","Triceps"};
 	Exercise inclineDumbbellBench = new Exercise("Incline Dumbbell Bench", "Using dumbbells on an incline bench, push dumbbells upwards until arms are locked out then back down to chest", inclineDumbbellBenchTargets);
 	String[] pullupTargets = {"Back","Bicep"};
-	Exercise pullup = new Exercise("Pullup","In a dead-hang with ")
+	Exercise pullup = new Exercise("Pullup","In a dead-hang with palms facing forward and pull up until chin reaches above the bar",pullupTargets);
+	String[] seatedRowTargets = {"Back","Bicep"};
+	Exercise seatedRow = new Exercise("Seated Row","",seatedRowTargets);
+	String [] lateralPullTargets = {"Back"};
+	Exercise lateralPull = new Exercise("Lateral Pull","",lateralPullTargets);
+	String [] lowerBackExtensionTargets = {"Lower Back"};
+	Exercise lowerBackExtension = new Exercise("Lower Back Extension","",lowerBackExtensionTargets);
+	String [] dumbbellBicepTargets = {"Bicep"};
+	Exercise dumbbellBicep = new Exercise ("Dumbbell Bicep Curl","",dumbbellBicepTargets);
+	String [] dumbbellBicepHammerCurlTargets = {"Bicep"};
+	Exercise dumbbellHammerCurl	 = new Exercise ("Dumbbell Hammer Curl", "", dumbbellBicepHammerCurlTargets);
+	String [] quadExtensionTargets = {"Quadriceps"};
+	Exercise quadExtension = new Exercise ("Quadricep Extension", "", quadExtensionTargets);
+	String [] hamstringCurlsTargets = {"Hamstrings"};
+	Exercise hamstringCurls = new Exercise ("Hamstring Curls","", hamstringCurlsTargets);
+	String [] calfRaisesTargets = {"Calves"};
+	Exercise calfRaises = new Exercise (Calf Raises,"",calfRaisesTargets);
+	String [] legPressTargets = {"Quadriceps", "Hamstrings"};
+	Excercise legPress = new Exercise ("Leg Press", "", legPressTargets);
+	String [] walkingLungesTargets = {"Quadriceps"};
+	Exercise walkingLunges = new Exercise("Walking Lunges", "", walkingLungesTargets);
+	String [] toeTouchesTargets = {"Abs"};
+	Exercise toeTouches = new Exercise("Toe Touches","", toeTouchesTargets);
+	String [] bicycleKicksTargets = {"Abs"};
+	Exercise bicycleKicks = new Exercise("Bicycle Kicks","",bicycleKicksTargets);
+	String [] legRaisesTargets = {"Abs"};
+	Exercise legRaises = new Exercise ("Leg Raises","",legRaisesTargets);
+
 }
