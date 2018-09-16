@@ -35,5 +35,8 @@ public class UserDatabase {
 		//TO BE IMPLEMENTED
 		return true;
 	}
-	
+	public void logChanges() {
+		//TO BE IMPLEMENTED
+		//ADD ANY CHANGES TO WEIGHT, BODY FAT, ECT HERE
+	}
 }
