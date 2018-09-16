@@ -36,7 +36,7 @@ public class GenerateUser {
 		System.out.println("Please Enter Your Hip Circumference in Inches (At Fullest Point) : ");
 		hipCircumference = input.nextDouble();
 	}		
-	public double[] determineFactors(boolean sex, double weight, double waistCircumference, double wristCircumference, double hipCircumference, double forearmCircumference) {
+	public double[] determineFactors() {
 		if(sex) {
 			double[] ret = {(weight * 1.082) + 94.42, waistCircumference * 4.15};
 			return ret;
@@ -46,18 +46,18 @@ public class GenerateUser {
 		}
 		
 	}
-	public double determineLeanBodyMass(boolean sex, double[] a) {
+	public double determineLeanBodyMass(double[] a) {
 		if(sex){
 			return a[0] - a[1];
 		}else{
 			return a[0] + a[1] - a[2] - a[3] + a[4];
 		}
 	}
-	public double determineBodyFatWeight(double leanBodyMass, double weight) {
-		return weight - leanBodyMass;
+	public double determineBodyFatWeight() {
+		return weight - determineLeanBodyMass(determineFactors());
 	}
-	public double determineBodyFatPercent(double bodyFatWeight, double weight) {
-		return (bodyFatWeight * 100)/weight;
+	public double determineBodyFatPercent() {
+		return (determineBodyFatWeight() * 100)/weight;
 	}
 	public double determineBMI(double weight, double height) {
 		return (weight * 703)/(height * height);
@@ -104,8 +104,9 @@ public class GenerateUser {
 	public void setHipCircumference(double hc) {
 		hipCircumference = hc;
 	}
-	public void determineHealth() {
+	public String determineHealth() {
 		//point-slope form for height which is compare in this statement
+		/*
 		double compare = (12.0/42.0)*(weight-98)+61;
 		if(height>compare) {
 			return "You at at an unhealty range for your characteristics.";
@@ -118,36 +119,37 @@ public class GenerateUser {
 		if(height>compare) {
 			return "You are at an overweight range for your characteristics.";
 		}
-		return "You are at an obese range for your characteristics.";
-		if ()
-		if (sex = true){
+			return "You are at an obese range for your characteristics.";
+		*/
+		if (sex){
 			if (determineBodyFatPercent()> 6 || determineBodyFatPercent() < 13){
-				return "Based on your body fat percentage, you are catagorized as athletic"
+				return "Based on your body fat percentage, you are catagorized as athletic";
 			}
 			else if (determineBodyFatPercent() > 14 || determineBodyFatPercent() < 17){
-				return "Based on your body fat percentage, you are catagorized as fit"
+				return "Based on your body fat percentage, you are catagorized as fit";
 			}
 			else if (determineBodyFatPercent() > 18 || determineBodyFatPercent() < 25){
-				return "Based on your body fat percentage, you are catagorized as average"
+				return "Based on your body fat percentage, you are catagorized as average";
 				}
 				else if (determineBodyFatPercent() >25){
-					return "Based on your body fat percentage, you are catagorized as obese"
+					return "Based on your body fat percentage, you are catagorized as obese";
 			}
 		}
-		else if (sex = false){
+		else{
 			if(determineBodyFatPercent()> 14 || determineBodyFatPercent() <20){
-				return "Based on your body fat percentage, you are catagorized as athletic"
+				return "Based on your body fat percentage, you are catagorized as athletic";
 			}
 			else if(determineBodyFatPercent()>21||determineBodyFatPercent()<24){
-				return "Based on your body fat percentage, you are catagorized as fit"
+				return "Based on your body fat percentage, you are catagorized as fit";
 			}
 			else if(determineBodyFatPercent()>25||determineBodyFatPercent()<31){
-				return "Based on your body fat percentage, you are catagorized as average"
+				return "Based on your body fat percentage, you are catagorized as average";
 			}
 			else if(determineBodyFatPercent()>32){
-				return "Based on your body fat percentage, you are catagorized as obese"
+				return "Based on your body fat percentage, you are catagorized as obese";
 			}
 		}
+		return "error";
 
 	}
 }

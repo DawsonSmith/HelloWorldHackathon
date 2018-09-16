@@ -39,9 +39,9 @@ public class Schedule {
 	String [] hamstringCurlsTargets = {"Hamstrings"};
 	Exercise hamstringCurls = new Exercise ("Hamstring Curls","", hamstringCurlsTargets);
 	String [] calfRaisesTargets = {"Calves"};
-	Exercise calfRaises = new Exercise (Calf Raises,"",calfRaisesTargets);
+	Exercise calfRaises = new Exercise ("Calf Raises","",calfRaisesTargets);
 	String [] legPressTargets = {"Quadriceps", "Hamstrings"};
-	Excercise legPress = new Exercise ("Leg Press", "", legPressTargets);
+	Exercise legPress = new Exercise ("Leg Press", "", legPressTargets);
 	String [] walkingLungesTargets = {"Quadriceps"};
 	Exercise walkingLunges = new Exercise("Walking Lunges", "", walkingLungesTargets);
 	String [] toeTouchesTargets = {"Abs"};
